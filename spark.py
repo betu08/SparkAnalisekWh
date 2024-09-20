@@ -1,3 +1,4 @@
+# Configurar o diretorio do java instalado e spark na sua maquina
 import os
 os.environ["JAVA_HOME"] = "C:/Program Files/Java/jdk-17"
 os.environ["SPARK_HOME"] = "C:/Spark/spark-3.5.2-bin-hadoop3/spark-3.5.2-bin-hadoop3"
@@ -12,7 +13,8 @@ from pyspark.sql.types import DoubleType, StringType, IntegerType
 from pyspark.sql import functions as f
 
 # Acessando o arquivo csv
-csv_file_path = "C:/Users/rober/PycharmProjects/pythonProject/data/arquivo.csv"
+# Configurar o diretorio onde esta o arquivo csv com as informacoes que vão ser analisadas
+csv_file_path = "C:/Users/rober/PycharmProjects/Nova pasta/SparkAnalisekWh/data/arquivo.csv"
 df = spark.read.csv(csv_file_path, header=True, inferSchema=True)
 
 # Realizando o tratamento de dados da planilha
